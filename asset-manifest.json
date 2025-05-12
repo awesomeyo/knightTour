@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/awesomeyo/knightTour/static/css/main.f4397e7e.css",
-    "main.js": "/awesomeyo/knightTour/static/js/main.6ff78e3d.js",
-    "index.html": "/awesomeyo/knightTour/index.html",
-    "main.f4397e7e.css.map": "/awesomeyo/knightTour/static/css/main.f4397e7e.css.map",
-    "main.6ff78e3d.js.map": "/awesomeyo/knightTour/static/js/main.6ff78e3d.js.map"
+    "main.css": "/knightTour/static/css/main.f4397e7e.css",
+    "main.js": "/knightTour/static/js/main.6ff78e3d.js",
+    "index.html": "/knightTour/index.html",
+    "main.f4397e7e.css.map": "/knightTour/static/css/main.f4397e7e.css.map",
+    "main.6ff78e3d.js.map": "/knightTour/static/js/main.6ff78e3d.js.map"
   },
   "entrypoints": [
     "static/css/main.f4397e7e.css",
