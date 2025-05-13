@@ -25,6 +25,8 @@ const KnightsTourGame = () => {
 
   // Generate valid knight moves
   const getValidMoves = (x, y) => {
+    if (x === null || y === null) return [];
+    
     return KNIGHT_MOVES
       .map(([dx, dy]) => [x + dx, y + dy])
       .filter(([newX, newY]) => 
@@ -41,6 +43,7 @@ const KnightsTourGame = () => {
 
   // Check if the player is stuck (no valid moves)
   const isPlayerStuck = (x, y) => {
+    if (x === null || y === null) return false;
     const validMoves = getValidMoves(x, y);
     return validMoves.length === 0;
   };
@@ -71,18 +74,15 @@ const KnightsTourGame = () => {
         if (currentMove === boardSize * boardSize) {
           setGameStatus('complete');
         } else {
-          // Check if next moves are possible
-          const nextMoveExists = validMoves.some(([vx, vy]) => 
-            getValidMoves(vx, vy).length > 0 || currentMove + 1 === boardSize * boardSize
-          );
-
-          if (!nextMoveExists) {
+          setSelectedSquare([x, y]);
+          // Check if next moves are possible from the new position
+          const nextValidMoves = getValidMoves(x, y);
+          if (nextValidMoves.length === 0) {
             setGameStatus('lost');
           }
         }
 
         setCurrentMove(currentMove + 1);
-        setSelectedSquare([x, y]);
       }
     }
   };
@@ -134,7 +134,7 @@ const KnightsTourGame = () => {
               key={x} 
               className={cellClass}
               onClick={() => {
-                if (cell === 0 || (showHints && isValidMove)) {
+                if (gameStatus === 'playing' && (cell === 0 || (showHints && isValidMove))) {
                   handleSquareClick(x, y);
                 }
               }}
