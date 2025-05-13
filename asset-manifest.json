@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/knightTour/static/css/main.f4397e7e.css",
-    "main.js": "/knightTour/static/js/main.6ff78e3d.js",
+    "main.js": "/knightTour/static/js/main.e460e102.js",
     "index.html": "/knightTour/index.html",
     "main.f4397e7e.css.map": "/knightTour/static/css/main.f4397e7e.css.map",
-    "main.6ff78e3d.js.map": "/knightTour/static/js/main.6ff78e3d.js.map"
+    "main.e460e102.js.map": "/knightTour/static/js/main.e460e102.js.map"
   },
   "entrypoints": [
     "static/css/main.f4397e7e.css",
-    "static/js/main.6ff78e3d.js"
+    "static/js/main.e460e102.js"
   ]
 }
